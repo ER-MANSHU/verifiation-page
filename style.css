@@ -1,0 +1,162 @@
+:root {
+    --blue: #007bff;
+    --dark-blue: #0056b3;
+    --green: #28a745;
+    --red: #dc3545;
+    --light: #f8f9fa;
+    --dark: #333;
+    --muted: #6c757d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--light);
+    margin: 0;
+    padding: 40px 10px;
+    color: var(--dark);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin: 0;
+}
+
+.title {
+    font-weight: 300;
+}
+
+.subtitle {
+    color: var(--muted);
+}
+
+hr {
+    width: 60px;
+    border: none;
+    border-top: 3px solid var(--blue);
+    margin: 15px auto 0;
+}
+
+/* Form */
+.verification-form {
+    margin: 30px 0;
+}
+
+form {
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+}
+
+button {
+    padding: 14px 25px;
+    border: none;
+    background: var(--blue);
+    color: white;
+    font-weight: 700;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--dark-blue);
+}
+
+button:disabled {
+    background: var(--muted);
+    cursor: not-allowed;
+}
+
+/* Result */
+.hidden {
+    display: none !important;
+}
+
+.result-card {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.08);
+}
+
+#statusHeader {
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin: -30px -30px 20px;
+}
+
+.success #statusHeader { background: var(--green); }
+.failure #statusHeader { background: var(--red); }
+
+.message {
+    text-align: center;
+    font-weight: 500;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.certificate-preview {
+    text-align: center;
+}
+
+.certificate-image {
+    width: 100%;
+    max-width: 700px;
+    border: 4px solid var(--blue);
+    margin-bottom: 15px;
+}
+
+.download-button {
+    border-radius: 6px;
+}
+
+/* Loader */
+.loader {
+    border: 5px solid #eee;
+    border-top: 5px solid var(--blue);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--muted);
+}

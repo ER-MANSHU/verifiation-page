@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glodias Certificate Verification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1 class="logo">Glodias</h1>
+        <h2 class="title">Certificate Verification Portal</h2>
+        <p class="subtitle">Verify Intern & Outsourced Member Credentials</p>
+        <hr>
+    </header>
+
+    <section class="verification-form">
+        <form id="verificationForm">
+            <input
+                type="text"
+                id="credentialId"
+                placeholder="Enter Credential ID (e.g. GLD-INT-2025-001)"
+                required
+            >
+            <button type="submit" id="verifyButton">Verify Certificate</button>
+        </form>
+    </section>
+
+    <section id="resultContainer" class="hidden">
+        <div id="loader" class="loader hidden"></div>
+
+        <div id="resultCard" class="result-card">
+            <h3 id="statusHeader"></h3>
+            <p id="message" class="message"></p>
+
+            <div id="detailsGrid" class="details-grid hidden">
+                <p><strong>Name:</strong> <span id="internName"></span></p>
+                <p><strong>Department:</strong> <span id="department"></span></p>
+                <p><strong>Program / Role:</strong> <span id="program"></span></p>
+                <p><strong>Credential ID:</strong> <span id="credentialOutput"></span></p>
+                <p><strong>Issue Date:</strong> <span id="issueDate"></span></p>
+            </div>
+
+            <div id="certificatePreview" class="certificate-preview hidden">
+                <h4 class="preview-title">Certificate Preview</h4>
+                <img id="certificateImage" class="certificate-image" alt="Certificate Preview">
+                <button id="downloadButton" class="download-button">
+                    ⬇ Download Official Certificate (PDF)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Glodias. All Rights Reserved.</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
