@@ -4,10 +4,10 @@
 const CERTIFICATES = [
     {
         credential_id: "GLD-INT-2025-001",
-        name: "AMIT SHARMA",
+        name: "Himanshu Mishra",
         department: "Frontend Development",
         program: "Summer Internship 2025",
-        issue_date: "15 August 2025",
+        issue_date: "29 oct 2025",
         image: "certificates/GLD-INT-2025-001.jpg",
         pdf: "certificates/GLD-INT-2025-001.pdf"
     }
@@ -92,3 +92,4 @@ function showFailure(id) {
     document.getElementById("message").textContent =
         `Credential ID "${id}" was not found. Please recheck and try again.`;
 }
+
